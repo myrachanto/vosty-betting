@@ -1,0 +1,80 @@
+{
+  "Logo": {
+    "description": "Auto imported from /components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from /components/Logo.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from /components/Navbar.vue"
+  },
+  "LazyNavbar": {
+    "description": "Auto imported from /components/Navbar.vue"
+  },
+  "Asection": {
+    "description": "Auto imported from /components/asection.vue"
+  },
+  "LazyAsection": {
+    "description": "Auto imported from /components/asection.vue"
+  },
+  "Asection2": {
+    "description": "Auto imported from /components/asection2.vue"
+  },
+  "LazyAsection2": {
+    "description": "Auto imported from /components/asection2.vue"
+  },
+  "Blogcard": {
+    "description": "Auto imported from /components/blogcard.vue"
+  },
+  "LazyBlogcard": {
+    "description": "Auto imported from /components/blogcard.vue"
+  },
+  "Card": {
+    "description": "Auto imported from /components/card.vue"
+  },
+  "LazyCard": {
+    "description": "Auto imported from /components/card.vue"
+  },
+  "Cardportfolio": {
+    "description": "Auto imported from /components/cardportfolio.vue"
+  },
+  "LazyCardportfolio": {
+    "description": "Auto imported from /components/cardportfolio.vue"
+  },
+  "Enders": {
+    "description": "Auto imported from /components/enders.vue"
+  },
+  "LazyEnders": {
+    "description": "Auto imported from /components/enders.vue"
+  },
+  "Footercard": {
+    "description": "Auto imported from /components/footercard.vue"
+  },
+  "LazyFootercard": {
+    "description": "Auto imported from /components/footercard.vue"
+  },
+  "Formcard": {
+    "description": "Auto imported from /components/formcard.vue"
+  },
+  "LazyFormcard": {
+    "description": "Auto imported from /components/formcard.vue"
+  },
+  "Pricing": {
+    "description": "Auto imported from /components/pricing.vue"
+  },
+  "LazyPricing": {
+    "description": "Auto imported from /components/pricing.vue"
+  },
+  "Seo": {
+    "description": "Auto imported from /components/seo.vue"
+  },
+  "LazySeo": {
+    "description": "Auto imported from /components/seo.vue"
+  },
+  "Whatsapp": {
+    "description": "Auto imported from /components/modals/whatsapp.vue"
+  },
+  "LazyWhatsapp": {
+    "description": "Auto imported from /components/modals/whatsapp.vue"
+  }
+}

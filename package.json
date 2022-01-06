@@ -1,5 +1,5 @@
 {
-  "name": "mywebssite",
+  "name": "vosty",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,8 +14,10 @@
     "autoprefixer": "^9.8.6",
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "node-fetch": "^2.6.1",
     "nuxt": "^2.14.6",
     "nuxt-lazy-load": "^1.2.9",
+    "nuxt-socket-io": "^2.0.0",
     "postcss": "^7.0.35",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",

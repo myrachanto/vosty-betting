@@ -3,95 +3,78 @@
     "name": "about",
     "path": "/about",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/about.vue",
-    "chunkName": "pages/about",
-    "url": "/about",
-    "_name": "_471755fe"
+    "chunkName": "pages/about"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/contact.vue",
-    "chunkName": "pages/contact",
-    "url": "/contact",
-    "_name": "_3dd2ba5e"
+    "chunkName": "pages/contact"
   },
   {
     "name": "fqa",
     "path": "/fqa",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/fqa.vue",
-    "chunkName": "pages/fqa",
-    "url": "/fqa",
-    "_name": "_629eb5b2"
+    "chunkName": "pages/fqa"
   },
   {
     "name": "games",
     "path": "/games",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/games.vue",
-    "chunkName": "pages/games",
-    "url": "/games",
-    "_name": "_58aea99c"
+    "chunkName": "pages/games"
   },
   {
     "name": "help",
     "path": "/help",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/help.vue",
-    "chunkName": "pages/help",
-    "url": "/help",
-    "_name": "_72a23be0"
+    "chunkName": "pages/help"
   },
   {
     "name": "insights",
     "path": "/insights",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/index.vue",
-    "chunkName": "pages/insights/index",
-    "url": "/insights",
-    "_name": "_63494efd"
+    "chunkName": "pages/insights/index"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/portfolio.vue",
-    "chunkName": "pages/portfolio",
-    "url": "/portfolio",
-    "_name": "_31dde48e"
+    "chunkName": "pages/portfolio"
   },
   {
     "name": "pricing",
     "path": "/pricing",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/pricing.vue",
-    "chunkName": "pages/pricing",
-    "url": "/pricing",
-    "_name": "_3b85db77"
+    "chunkName": "pages/pricing"
   },
   {
     "name": "support",
     "path": "/support",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/support.vue",
-    "chunkName": "pages/support",
-    "url": "/support",
-    "_name": "_704e8f00"
+    "chunkName": "pages/support"
   },
   {
     "name": "insights-page",
     "path": "/insights/page",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/page.vue",
-    "chunkName": "pages/insights/page",
-    "url": "/insights/page",
-    "_name": "_79fbaab4"
+    "chunkName": "pages/insights/page"
+  },
+  {
+    "name": "gameresult-id",
+    "path": "/gameresult/:id?",
+    "component": "/home/myrachanto/frontend/jobs/vosty/pages/gameresult/_id.vue",
+    "chunkName": "pages/gameresult/_id"
   },
   {
     "name": "insights-url",
     "path": "/insights/:url",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/_url/index.vue",
-    "chunkName": "pages/insights/_url/index",
-    "_name": "_04277718"
+    "chunkName": "pages/insights/_url/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/home/myrachanto/frontend/jobs/vosty/pages/index.vue",
-    "chunkName": "pages/index",
-    "url": "/",
-    "_name": "_66cf30c3"
+    "chunkName": "pages/index"
   }
 ]

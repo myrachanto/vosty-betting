@@ -1,3 +1,4 @@
+// import fetch from 'node-fetch'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -31,26 +32,34 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    '@nuxtjs/sitemap',
-    // ['nuxt-lazy-load', {
-    //   // These are the default values
-    //   images: true,
-    //   native: false,
-    //   directiveOnly: false,      
-    //   // Default image must be in the static folder
-    //   // defaultImage: '/images/default-image.jpg',
-    // }]
-  ],
-  
-  sitemap: {
-    hostname: "https://chantosweb.co.ke",
-  },
+  // modules: [
+  //   '@nuxtjs/sitemap',
+  //   // 'nuxt-socket-io',
+  // ],
+  // io: {
+  //   // module options
+  //   sockets: [{
+  //     name: 'main',
+  //     url: 'http://localhost:2000/game'
+  //   }]
+  // },
+  // sitemap: {
+  //   hostname: "https://chantosweb.co.ke",
+  // },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
   transition:{
     name: 'fade',
     mode: 'out-in'
-  }
+  },
+  // hooks: {
+  //   ready(nuxt) {
+  //      setInterval(async () => {
+  //         const games = await fetch(`http://localhost:2000/game/Premier League`).then(res => res.json())
+  //         nuxt.$sse.broadcast('games', games)
+  //         // games.forEach(game => nuxt.$sse.broadcast('game', game))
+  //      }, 1000)
+  //    }
+  //  }
 }

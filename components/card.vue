@@ -4,19 +4,31 @@
           <h2 class="h4header">{{item.team_a}} <span class="vs">VS</span> {{item.team_b}}</h2>
           <hr />
           <h4 class="dv">Competition: <span class="vs">{{item.competition}}</span></h4>
+          <h5 class="dv" v-if="(item.sport_name !== 'Tennis' && item.sport_name !== 'Basketball')">
+            Country: <span class="vs">{{item.country}}</span></h5>
           <h5 class="dv">Time: <span class="vs">{{item.dated}}</span></h5>
           <div class="odds">
             <div class="win dv8">Win</div>
             <div class="draw dv8">Draw</div>
             <div class="loss dv8">Loss</div>
           </div>
+          <div class="pb2">
           <div class="odds">
             <div class="win pb ">{{item.team_a_win}}</div>
             <div class="draw pb">{{item.draw}}</div>
             <div class="loss pb">{{item.team_b_win}}</div>
           </div>
-          <hr class="dv9"/>
-          <div class="odds">
+          <div class="odds ">
+            <div class="win pb  ">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
+            <div class="draw pb">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
+            <div class="loss pb">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
+          </div>
+          </div>
+          <div class="" v-if="(item.sport_name !== 'Tennis' && item.sport_name !== 'Basketball')" >
+          <div class="odds" >
             <div class="win dv8">1 or X</div>
             <div class="draw dv8">X or 2</div>
             <div class="loss dv8">1 or 2</div>
@@ -26,16 +38,18 @@
             <div class="draw pb">{{item.team_b_win_or_draw}}</div>
             <div class="loss pb">{{item.team_a_win_or_team_b_win}}</div>
           </div>
-          <hr class="dv9"/>
-          <div class="odds1">
-            <div class="win dv8">Over 2.5 goals</div>
-            <div class="draw dv8">Below 2.5 goals</div>
+           <div class="odds ">
+            <div class="win pb  ">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
+            <div class="draw pb">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
+            <div class="loss pb">
+      <img src="~/static/betika.png" alt="betika" class="betts"/></div>
           </div>
-          <div class="odds1">
-            <div class="win pb ">{{item.goal_over}}</div>
-            <div class="draw pb">{{item.goal_under}}</div>
           </div>
-          <nuxt-link :to="`${item.url}`" class="learn">{{item.alias}}</nuxt-link>
+          <div class="linker" v-if="(item.sport_name !== 'Tennis' && item.sport_name !== 'Basketball')" >
+          <nuxt-link :to="`gameresult/${item._id}`" class="learn">more</nuxt-link>
+          </div>
         </div>
         </div>
 </template>
@@ -43,8 +57,10 @@
 <script>
 export default {
   props:['item', 'host']
+  
 
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -61,10 +77,10 @@ export default {
   @apply colortheme text-sm;
 }
 .pb{
-  @apply colortheme text-sm cursor-pointer;
+  @apply colortheme text-xs font-bold cursor-pointer mt-1 px-2;
 }
 .dv8{
-  @apply text-base text-green-700; 
+  @apply text-base text-white bg-green-700 py-2 shadow-lg px-2; 
 }
 .dv9{
   @apply my-2 text-green-700; 
@@ -93,7 +109,16 @@ export default {
 .ft{
   @apply flex justify-center items-center;
 }
+.linker{
+  @apply flex justify-center items-center;
+}
 .learn{
-  @apply no-underline hover:underline;
+  @apply no-underline hover:underline p-4;
+}
+.betts{
+  @apply w-16 h-10 -mx-2 -my-3;
+}
+.pb2{
+  @apply shadow-md;
 }
 </style>

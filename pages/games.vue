@@ -1,11 +1,27 @@
 <template>
    <!-- section -->
-     <section class="section">
-        <div class="compename"><h2 class="">{{name}}</h2></div>
+     <section class="section gradient">
+        <div class="compename gradient">
+          <h2 class="headering">Leagues :- {{standin}}</h2>
+        <div class="menucomps">
+          <div class="dvs" :class="{ active: Issoccer }" @click="getdata('soccer',soccer)">Football</div>
+          <div class="dvs" :class="{ active: IsBasket }" @click="getdata('basket', basket)">Basketball</div>
+          <div class="dvs" :class="{ active: IsTennis }" @click="getdata('tennis', tennis)">Tennis</div>
+        </div>
+       <div class="search">
+                <input
+                 type="text"
+                 @keydown="searching(search)"
+                 @keyup="searching(search)"
+                 v-model="search"
+                 class="search-input"
+                 placeholder="Search Games" />
+              </div>
+        </div>
       <div class="gamers">
         <div class="competition">
           <ul v-for="(compe, i) in items" :key="i">
-            <li class="compe" @click="getdata(compe)">{{compe}}</li>
+            <li class="compe" @click="Gogetdata(compe.header)">{{compe.header}}</li>
           </ul>
         </div>
       <div class="flexing1 results">
@@ -21,7 +37,6 @@
 </template>
 
 <script>
-import {games} from '~/helpers/data.js'
 import { http, host } from '~/helpers/index.js'
 // import cardportfolio from '~/components/cardportfolio.vue'
 import Card from '~/components/card.vue'
@@ -31,44 +46,74 @@ export default {
   data(){
     return{
       compe :'',
+      search: '',
+      items: [],
+      standin: 'Premier League',
       loading: false,
       competition: [],
-      games,
+      gametype: 'soccer',
+      soccer: 'Premier League',
+      basket: 'NBA',
+      tennis: 'ITF Dominican Republic 04A, Women Singles',
       host
     }
   }, 
   created(){
-    this.name = "Premier League"
-    this.getdata(this.name)
+    setInterval(() => {
+      this.getdata(this.gametype, this.standin)
+    }, 3000)
+  },
+  computed:{
+    Issoccer(){
+      return this.gametype === 'soccer'
+    },
+    IsTennis(){
+      return this.gametype === 'tennis'
+    },
+    IsBasket(){
+      return this.gametype === 'basket'
+    }
   },
   methods :{
-    async getdata(name) {
-      this.loading = true
-      this.name = name
-      const resp = await http.get(`/game/${name}`)
-      this.competition = resp.data
-      this.loading =false
-    }
-  },
-  async asyncData () {
-    let items = []
-    // let competition = []
-    // let seo = {}
-    // let name = ''
-    try {
-      const { data } = await http.get(`/games`)
-      // const response = await http.get(`/front/seo/portfolio`)
-      items = data
-      // competition= resp.data
-      
-      // seo = response.data
-      // name = params.flavour
-      // console.log(data)
-      // return { items, seo, name }
-      return { items}
-    } catch (err) {
-      console.log(err)
-    }
+    async Choose(game,standin) {
+      this.getdata(game, standin)
+    },
+    async searching(search){
+      this.search =search
+      this.getdata(this.standin, this.gametype)
+    },
+    async Gogetdata(header){
+      this.standin = header
+      this.getdata(this.gametype, this.standin)
+    },
+    async getdata(game,standin) {
+      this.gametype = game
+      this.standin = standin
+      console.log("helloooooooo1", this.standin, this.gametype)
+    // this.scrollToTop()
+    if ( this.items.length < 1 && this.competition.length < 1 ){this.loading = true}
+            const {data} = await http.get(`/game`,{
+            params:{
+              game: this.gametype,
+              standin: this.standin,
+              search: this.search
+            }
+          })
+            if (data.game_type === "soccer"){
+              this.items = data.soccer.headers
+              this.competition = data.soccer.results
+            }else if (data.game_type === "tennis"){
+              this.items = data.tenis.headers
+              this.competition = data.tenis.results
+            }else {
+              this.items = data.basket.headers
+              this.competition = data.basket.results
+            }
+            this.loading =false
+    },
+    scrollToTop() {
+        window.scrollTo(0, 0);
+      }
   },
   head () {
     const seo = this.seo || {
@@ -103,7 +148,7 @@ export default {
   @apply flex justify-start items-start;
 }
 .griding{
-  @apply grid lg:grid-cols-4 container gap-4 mt-5;
+  @apply grid lg:grid-cols-4 container mt-5 px-4;
 }
 .gamers{
   @apply grid grid-cols-5 bg-gray-200;
@@ -111,20 +156,38 @@ export default {
 .competition{
   @apply bg-green-700 hidden md:block;
 }
+.active {
+  @apply bg-green-700;
+}
 .results{
   @apply col-span-4
 }
 .compe{
-  @apply p-2 shadow-lg rounded-lg  cursor-pointer hover:bg-red-400 list-none text-white;
+  @apply py-2 px-4 shadow-lg rounded-lg  cursor-pointer hover:bg-red-400 list-none text-white;
 }
 .lad{
   @apply w-screen h-screen flex justify-center items-center ;
 }
 .loading{
-  @apply bg-red-200  flex justify-center items-center;
+  @apply flex justify-center items-center;
 }
 .compename{
-  @apply mt-20 text-2xl flex justify-center items-center;
+  @apply mt-14 text-2xl grid grid-cols-1 md:grid-cols-5 ;
+}
+.headering{
+  @apply text-white mx-4 py-2;
+}
+.menucomps {
+  @apply md:col-span-2 py-2 flex justify-start items-center text-white text-base;
+}
+.dvs{
+  @apply hover:bg-green-700 cursor-pointer p-2  rounded-lg mr-4;
+}
+.search{
+  @apply relative md:col-span-2 py-2;
+}
+.search-input{
+  @apply border-b-2 rounded-lg p-2 ml-4 md:ml-0 w-11/12  right-1 focus:shadow-xl hover:bg-gray-200 focus:outline-none text-black;
 }
 .lds-hourglass {
   display: inline-block;
@@ -141,7 +204,7 @@ export default {
   margin: 8px;
   box-sizing: border-box;
   border: 32px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border-color: rgb(151, 54, 54) transparent rgb(151, 28, 28) transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {

@@ -7,10 +7,10 @@
       <div class="span2">
       <div class="main1 ">
         <!--Left Col-->
-          <p class="message2 ">Best Bets  </p>
+          <p class="message2 ">Wekelea hapa </p>
          
           <p class="commento">
-            Get the best betting odds
+            We show you where the best odds and verified Profitable tipsters are
           </p>
           <nuxt-link to="/aboutus"><button class="btn3">
             For more info
@@ -39,7 +39,7 @@
       <h2 class="s-head">Top Games</h2>
       <div class="flexing">
       <div class="griding" >    
-       <card v-for="item in games" :key="item.id" :item="item" :host="host"/>
+       <card v-for="item in items" :key="item.id" :item="item" :host="host"/>
       </div>
       </div>
      </section>
@@ -64,13 +64,13 @@ import Asection from '~/components/asection.vue'
 import Asection2 from '~/components/asection2.vue'
 import card from '~/components/card.vue'
 import Cardportfolio from '~/components/cardportfolio.vue'
-import {games} from '~/helpers/data.js'
+// import {games} from '~/helpers/data.js'
 // import Seo from '~/components/seo.vue'
 export default {
   components: { card, Asection, Asection2, Cardportfolio },
   data(){
     return{
-      games,
+      // games,
       host,
       title: 'Best Ecommerce Developers|Custom website Designers at an Afforadable Price',
       meta: 'Ecomerce websites developers, Custom website Designers, responsive designs and SEO friend sites In Nairobi'
@@ -78,18 +78,18 @@ export default {
   },    
   async asyncData () {
     let items = []
-    let portfolios = []
-    let seo = {}
+    // let portfolios = []
+    // let seo = {}
     // let name = ''
     try {
-      const { data } = await http.get(`/front/home`)
-      items = data.featured
-      portfolios = data.newarrivals
-      seo = data.seo
+      const { data } = await http.get(`/featured`)
+      items = data
+      // portfolios = data.newarrivals
+      // seo = data.seo
       // name = params.flavour
       // console.log(items)
-      // return { items, seo, name }
-      return { items, portfolios, seo }
+      return { items }
+      // return { items, portfolios, seo }
     } catch (err) {
       console.log(err)
     }
@@ -152,9 +152,9 @@ export default {
   @apply uppercase text-xl  text-white tracking-normal w-full;
 }
 .message2{
-  @apply my-4 text-2xl lg:text-4xl text-black md:text-gray-300 font-bold leading-tight;
+  @apply my-4 text-2xl lg:text-4xl text-black md:text-gray-300 font-bold leading-tight flex justify-center items-center;
 }
-.comment{
+.commento{
   @apply leading-normal text-white text-xl mb-8 mr-4;
 }
 .btn3{

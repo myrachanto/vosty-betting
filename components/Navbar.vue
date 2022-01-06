@@ -29,6 +29,7 @@
 export default {
   data() {
     return {
+      search: '',
       isOpen: false,
     }
   },
@@ -36,7 +37,7 @@ export default {
     $route (to, from){
         this.isOpen = false;
     }
-} 
+},
 }
 </script>
 <style scoped>

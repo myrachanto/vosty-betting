@@ -14,6 +14,7 @@ const _31dde48e = () => interopDefault(import('../pages/portfolio.vue' /* webpac
 const _3b85db77 = () => interopDefault(import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */))
 const _704e8f00 = () => interopDefault(import('../pages/support.vue' /* webpackChunkName: "pages/support" */))
 const _79fbaab4 = () => interopDefault(import('../pages/insights/page.vue' /* webpackChunkName: "pages/insights/page" */))
+const _1d03d199 = () => interopDefault(import('../pages/gameresult/_id.vue' /* webpackChunkName: "pages/gameresult/_id" */))
 const _04277718 = () => interopDefault(import('../pages/insights/_url/index.vue' /* webpackChunkName: "pages/insights/_url/index" */))
 const _66cf30c3 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -73,6 +74,10 @@ export const routerOptions = {
     path: "/insights/page",
     component: _79fbaab4,
     name: "insights-page"
+  }, {
+    path: "/gameresult/:id?",
+    component: _1d03d199,
+    name: "gameresult-id"
   }, {
     path: "/insights/:url",
     component: _04277718,

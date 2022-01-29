@@ -1,13 +1,12 @@
 <template>
   <div>
     <div class="sections">
-      <h2 class="header1">Services</h2>
+      <!-- <h2 class="header1">Services</h2> -->
       <div class="flexing">
       <div class="griding">
       <div class="comment">
-      <h2 class="h2c">What we offer</h2>
-      <p>We design and develop custom websites for our clients with both application(CMS) and a website. We use light and fast loading tech stack to increase loading speed</p>
-      <p>Over the years we have design and built ecommerce websites, essay writting websites, simple websites among others</p>
+      <h2 class="h2c">Our Mission</h2>
+      <p>WekeleaHapa’s mission is to ensure that Kenyan bettors have the tools necessary to become profitable by helping them find the highest odds for their stakes and easily track their betting outcomes. We also seek to ensure tipsters’ transparency and accountability through a proven track record and profitability before they can sell their tips. </p>
 
       </div>
       <div class="imaging">

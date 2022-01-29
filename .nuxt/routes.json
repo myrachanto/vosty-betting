@@ -2,79 +2,92 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/about.vue",
-    "chunkName": "pages/about"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_2922c09d"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/contact.vue",
-    "chunkName": "pages/contact"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_6df1e1b0"
   },
   {
     "name": "fqa",
     "path": "/fqa",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/fqa.vue",
-    "chunkName": "pages/fqa"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/fqa.vue",
+    "chunkName": "pages/fqa",
+    "_name": "_d0f7a8f4"
   },
   {
     "name": "games",
     "path": "/games",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/games.vue",
-    "chunkName": "pages/games"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/games.vue",
+    "chunkName": "pages/games",
+    "_name": "_9497d45e"
   },
   {
     "name": "help",
     "path": "/help",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/help.vue",
-    "chunkName": "pages/help"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/help.vue",
+    "chunkName": "pages/help",
+    "_name": "_7780fd3e"
   },
   {
     "name": "insights",
     "path": "/insights",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/index.vue",
-    "chunkName": "pages/insights/index"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/insights/index.vue",
+    "chunkName": "pages/insights/index",
+    "_name": "_7fdb3184"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/portfolio.vue",
-    "chunkName": "pages/portfolio"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/portfolio.vue",
+    "chunkName": "pages/portfolio",
+    "_name": "_abcfde50"
   },
   {
     "name": "pricing",
     "path": "/pricing",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/pricing.vue",
-    "chunkName": "pages/pricing"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/pricing.vue",
+    "chunkName": "pages/pricing",
+    "_name": "_6f3dcb54"
   },
   {
     "name": "support",
     "path": "/support",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/support.vue",
-    "chunkName": "pages/support"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/support.vue",
+    "chunkName": "pages/support",
+    "_name": "_05ac6442"
   },
   {
     "name": "insights-page",
     "path": "/insights/page",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/page.vue",
-    "chunkName": "pages/insights/page"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/insights/page.vue",
+    "chunkName": "pages/insights/page",
+    "_name": "_e503f35a"
   },
   {
     "name": "gameresult-id",
     "path": "/gameresult/:id?",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/gameresult/_id.vue",
-    "chunkName": "pages/gameresult/_id"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/gameresult/_id.vue",
+    "chunkName": "pages/gameresult/_id",
+    "_name": "_79cce9da"
   },
   {
     "name": "insights-url",
     "path": "/insights/:url",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/insights/_url/index.vue",
-    "chunkName": "pages/insights/_url/index"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/insights/_url/index.vue",
+    "chunkName": "pages/insights/_url/index",
+    "_name": "_bf8f4112"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/myrachanto/frontend/jobs/vosty/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_48da9b62"
   }
 ]

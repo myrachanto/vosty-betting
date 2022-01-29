@@ -12,9 +12,9 @@
           <p class="commento">
             We show you where the best odds and verified Profitable tipsters are
           </p>
-          <nuxt-link to="/aboutus"><button class="btn3">
+          <div class="das8"><nuxt-link to="/aboutus"><button class="btn3">
             For more info
-          </button></nuxt-link>
+          </button></nuxt-link></div>
       </div>
       </div>
         <!--Right Col-->
@@ -183,5 +183,8 @@ export default {
 }
 .griding2{
   @apply grid md:grid-cols-2 lg:grid-cols-4 container gap-2 mt-10;
+}
+.das8{
+  @apply flex justify-center items-center;
 }
 </style>

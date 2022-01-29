@@ -5,7 +5,7 @@
       <nuxt-link to="/" class="listy">
       <div class="logo"> 
         <!-- <img src="~/assets/imgs/logo.png" class="logo1"/> -->
-        <span class="chantos1"><span class="chantos">Bet</span> Tips</span>
+        <span class="chantos1"><span class="chantos">Wekelea</span> Hapa</span>
       </div>
       </nuxt-link>
       <div class="menu1" @click="isOpen = !isOpen">

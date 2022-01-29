@@ -6,19 +6,9 @@
       <div class="comment">
          <div >
       <h2>About us</h2><br>
-      <h4>We provide the best responsive e commerce web design and develoment solutions to our clients.</h4><br>
+      <!-- <h4>We provide the best responsive e commerce web design and develoment solutions to our clients.</h4><br> -->
       <p>
-        Chantosweb developers is a web design and development firm that offers solution to web application needs in the realm 
-        of e commerce for both simple and sophisticated web development. We offer our services to clients in need of </p>
-        <ol class="ols">
-        <li>Personal responsive websites.</li>
-        <li>Responsive business websites .</li>
-        <li>E commerce web application.</li>
-        <li>E commerce Softwares among others.</li>
-        </ol><p>
-        Responsive nature of a website is becoming quite a figure in the world of internet today. Given that 
-        Responsive websites tend to be prioritized by the search engines not to mention the fact that vast internet
-        surfing is done via mobile phones and tablets</p>
+        WekeleaHapa’s mission is to ensure that Kenyan bettors have the tools necessary to become profitable by helping them find the highest odds for their stakes and easily track their betting outcomes. We also seek to ensure tipsters’ transparency and accountability through a proven track record and profitability before they can sell their tips. </p>
 
     </div>
       </div>

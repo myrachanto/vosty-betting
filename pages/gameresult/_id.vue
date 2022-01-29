@@ -1,6 +1,6 @@
 <template>
   <div class="wraps">
-    <div class="section ">
+    <div class="section">
       <h1 class="fds">More odds to the game between <span  class="vamos">{{game.team_a}}</span> and <span class="vamos">{{game.team_b}}</span></h1><br>
       <div class="gridder">
       <div class="cardi">
@@ -598,7 +598,7 @@ export default {
   @apply bg-gray-100;
 }
 .section{
-  @apply border border-b-2 py-8 container mx-auto;
+  @apply border border-b-2 py-8 container;
 }
 .fds{
   @apply text-center text-xl;
@@ -645,7 +645,7 @@ export default {
   @apply grid lg:grid-cols-2 gap-2;
 }
 .cardi{
-  @apply bg-gray-200 shadow-lg;
+  @apply bg-gray-200 shadow-lg  lg:px-4 2xl:px-0;
 }
 .betts{
   @apply w-24 h-14 -my-3;

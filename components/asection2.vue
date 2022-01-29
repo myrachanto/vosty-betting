@@ -8,11 +8,11 @@
         <img src="~/static/soccer7.jpeg" alt="responsive web development" class="cardimg1"  v-lazy-load/>
       </div>
       <div class="comment">
-      <h2 class="h2c">About our website designs and development experience</h2>
-      <p>We have been in the industry designing simple websites, e commerce websites, web applications and content management system (CMS) for more than three years now</p>
+      <!-- <h2 class="h2c">About our website designs and development experience</h2> -->
+      <p>We have been engaged in betting since it became mainstream in Kenya. We have seen the industry grow and major players join the industry. However, we have also seen the hurdles increase from a lack of good odds comparison tools to unscrupulous cons who pose as professional tipsters. These two main obstacles, combined with the taxes imposed by the government in 2018, make it hard for Kenyan bettors to be profitable. WekeleaHapa is the first of a kind website in Kenya dedicated to removing these hurdles and sanitizing the already tarnished name of a ‘Gambler.’ We want to prove that there can also be professional bettors who can make a living from betting. Join us on this incredible journey to ‘sanitize’ ourselves and prove the naysayers wrong!</p>
        <br/>
-       <h2>Our mision</h2>
-       <p>Our mision is to ensure that our clients get responsive, efficient, fast loading and more importantly search engine optimized(SEO) friendly websites</p>
+       <!-- <h2>Our mision</h2>
+       <p>WekeleaHapa’s mission is to ensure that Kenyan bettors have the tools necessary to become profitable by helping them find the highest odds for their stakes and easily track their betting outcomes. We also seek to ensure tipsters’ transparency and accountability through a proven track record and profitability before they can sell their tips. </p> -->
 
       </div>
       

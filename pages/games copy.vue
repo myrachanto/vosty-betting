@@ -1,6 +1,7 @@
 <template>
    <!-- section -->
      <section class="section gradient">
+       <div class="">
         <div class="compename gradient">
           <h2 class="headering">Leagues :- {{standin}}</h2>
         <div class="menucomps">
@@ -17,11 +18,16 @@
                  class="search-input"
                  placeholder="Search Games" />
               </div>
-              <div class="country">Country<select class="selecta"  @change="countrycoice" v-model="country">
-                <option>Select</option>
-                <option v-for="(country, l) in countries" :key="l">{{country.country}}</option>
-                </select></div>
         </div>
+        <div class="maxax">
+          <div class="scroller gradient" v-if="countries">
+          <button @click="prev()" class="hidden md:block ">‹</button>
+          <button @click="next()" class="hidden md:block ">›</button>
+          <div class="country"  id="divi">
+          <div class="dv8s" v-for="(country, l) in countries" :key="l">{{country.country}}</div>
+        </div></div>
+       </div>
+       </div>
       <div class="gamers">
         <div class="competition">
           <ul v-for="(compe, i) in items" :key="i">
@@ -29,10 +35,11 @@
           </ul>
         </div>
       <div class="flexing1 results">
-      <div v-if="loading" class="lad "><div class="loading lds-hourglass"></div></div>
+      <div><div v-if="loading" class="lad ">
+        <div class="loading lds-hourglass"></div></div>
       <div class="griding" v-else >
        <card v-for="item in competition" :key="item.id" :item="item" :host="host"/>
-      </div>
+      </div></div>
       </div>
       </div>
      <!-- <seo :header='seo.header_1' :body='seo.footer'/> -->
@@ -55,13 +62,15 @@ export default {
       standin: 'Premier League',
       loading: false,
       competition: [],
+      countries: [],
       gametype: 'soccer',
       soccer: 'Premier League',
       basket: 'NBA',
       tennis: 'ITF Dominican Republic 04A, Women Singles',
-      countries: [],
-      country: '',
-      host
+      host,
+      pos: 0,
+      sitepos: '',
+      dif: 0
     }
   }, 
   created(){
@@ -81,19 +90,23 @@ export default {
     }
   },
   methods :{
-    Choose(game,standin) {
+    next () {
+      document.getElementById('divi').scroll({ top: 0, left: -2000, behavior: 'smooth' })
+      // document.getElementById('divi').scrollLeft += 1440, 2000
+    },
+    prev () {
+      console.log('......................')
+      document.getElementById('divi').scroll({ top: 0, left: -2000, behavior: 'smooth' })
+    },
+    async Choose(game,standin) {
       this.getdata(game, standin)
     },
-    searching(search){
+    async searching(search){
       this.search =search
       this.getdata(this.standin, this.gametype)
     },
-    Gogetdata(header){
+    async Gogetdata(header){
       this.standin = header
-      this.getdata(this.gametype, this.standin)
-    },
-    countrycoice(){
-      console.log(">>>>>>>>>>>>>>ssssss",  this.country)
       this.getdata(this.gametype, this.standin)
     },
     async getdata(game,standin) {
@@ -106,8 +119,7 @@ export default {
             params:{
               game: this.gametype,
               standin: this.standin,
-              search: this.search, 
-              country: this.country
+              search: this.search
             }
           })
             if (data.game_type === "soccer"){
@@ -160,7 +172,7 @@ export default {
   @apply flex justify-start items-start;
 }
 .griding{
-  @apply grid lg:grid-cols-4 container mt-5 px-4;
+  @apply grid lg:grid-cols-3 2xl:grid-cols-4 container mt-5;
 }
 .gamers{
   @apply grid grid-cols-5 bg-gray-200;
@@ -184,7 +196,7 @@ export default {
   @apply flex justify-center items-center;
 }
 .compename{
-  @apply mt-14 text-xl grid grid-cols-1 md:grid-cols-6 ;
+  @apply mt-14 text-2xl grid grid-cols-1 md:grid-cols-5 ;
 }
 .headering{
   @apply text-white mx-4 py-2;
@@ -194,6 +206,9 @@ export default {
 }
 .dvs{
   @apply hover:bg-green-700 cursor-pointer p-2  rounded-lg mr-4;
+}
+.dv8s{
+  @apply hover:bg-green-700 cursor-pointer px-2  rounded-lg mr-4;
 }
 .search{
   @apply relative md:col-span-2 py-2;
@@ -233,9 +248,38 @@ export default {
   }
 }
 .country{
-  @apply text-base py-4;
+  @apply flex justify-between items-center bg-transparent overflow-scroll;
 }
-.selecta{
-  @apply w-32;
+.sects::-webkit-scrollbar{
+  visibility: hidden;
+  /* direction: ltr; */
+}
+.divi{
+  overflow-x: scroll;
+}
+button{
+  position: absolute;
+  top: -25%;
+  font-size: 70px;
+  color: green;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+  left: -1.5%;
+  z-index: 1;
+}
+button:nth-of-type(2){
+  /* width: 100%; */
+  left: 99.5%;
+  text-align: right;
+}
+.positon1 {
+  left: -720;
+}
+.scroller{
+  @apply container mx-auto relative;
+}
+.maxax{
+  @apply max-w-6xl mx-auto;
 }
 </style>

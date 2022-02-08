@@ -6,7 +6,7 @@
       <div class="griding">
       <div class="comment">
          <div >
-      <h3>Here are some of the most frequent questions in regard to web development and website design.</h3><br>
+      <!-- <h3>Here are some of the most frequent questions in regard to web development and website design.</h3><br> -->
       <div class="comment">
         <ol>
           <li class="quiz">How much does a simple website cost?<br />
@@ -66,6 +66,8 @@ export default {
     }
   }
 }
+var s = 1 + "was"
+
 </script>
 
 <style lang="scss" scoped>

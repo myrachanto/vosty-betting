@@ -8,6 +8,7 @@ const _2922c09d = () => interopDefault(import('../pages/about.vue' /* webpackChu
 const _6df1e1b0 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
 const _d0f7a8f4 = () => interopDefault(import('../pages/fqa.vue' /* webpackChunkName: "pages/fqa" */))
 const _9497d45e = () => interopDefault(import('../pages/games.vue' /* webpackChunkName: "pages/games" */))
+const _003d8fd8 = () => interopDefault(import('../pages/games copy.vue' /* webpackChunkName: "pages/games copy" */))
 const _7780fd3e = () => interopDefault(import('../pages/help.vue' /* webpackChunkName: "pages/help" */))
 const _7fdb3184 = () => interopDefault(import('../pages/insights/index.vue' /* webpackChunkName: "pages/insights/index" */))
 const _abcfde50 = () => interopDefault(import('../pages/portfolio.vue' /* webpackChunkName: "pages/portfolio" */))
@@ -50,6 +51,10 @@ export const routerOptions = {
     path: "/games",
     component: _9497d45e,
     name: "games"
+  }, {
+    path: "/games%20copy",
+    component: _003d8fd8,
+    name: "games copy"
   }, {
     path: "/help",
     component: _7780fd3e,

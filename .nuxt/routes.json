@@ -28,6 +28,13 @@
     "_name": "_9497d45e"
   },
   {
+    "name": "games copy",
+    "path": "/games%20copy",
+    "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/games copy.vue",
+    "chunkName": "pages/games copy",
+    "_name": "_003d8fd8"
+  },
+  {
     "name": "help",
     "path": "/help",
     "component": "/Users/myrachanto/frontend/vue/vosty-betting/pages/help.vue",
